@@ -1,0 +1,19 @@
+doctype html
+
+html
+  head
+    title Spfc
+    == csrf_meta_tags
+    == stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    == javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body
+    div.top-container
+      div.navbar-wrapper
+        header
+          div.top-header
+            = link_to root_path, class: 'website-logo'
+              = image_tag "spfc"
+          nav.navbar.navbar-inverse.navbar-static-top
+            = render "shared/partials/nav"
+    == yield
