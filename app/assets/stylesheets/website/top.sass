@@ -18,10 +18,11 @@
   float: left
   width: 100%
   margin: 0
+
   ul
     width: 100%
+  
     li
-      //display: none
       &:hover
         background: rgba(155, 26, 33, 0.27)
 
@@ -30,9 +31,11 @@
       @include respond-to(handhelds)
         display: block
         float: left
+  
       span
         padding: 15px 20px
         line-height: 20px
+
   .navbar-nav
     margin: 0
     @include respond-to(handhelds)
@@ -41,23 +44,11 @@
       position: absolute
       background: $preto-transp
       overflow-y: auto
-
       transition-property: all
       transition-duration: .5s
       transition-timing-function: ease-in
-      // opacity: 0
-      // transition: opacity 0.4s ease-in
-      // -ms-transition: opacity 0.4s ease-in
-      // -moz-transition: opacity 0.4s ease-in
-      // -webkit-transition: opacity 0.4s ease-in
-
       &.visible-menu
         max-height: 600px
-        // opacity: 1
-        // transition: opacity 0.4s ease-out
-        // -ms-transition: opacity 0.4s ease-out
-        // -moz-transition: opacity 0.4s ease-out
-        // -webkit-transition: opacity 0.4s ease-out
 
     li
       float: left
@@ -65,6 +56,7 @@
         width: 100%
       &:hover
         background: rgba(155, 26, 33, 0.27)
+
   a
     cursor: pointer
 

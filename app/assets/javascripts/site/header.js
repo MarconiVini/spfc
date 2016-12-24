@@ -14,7 +14,7 @@ $(function() {
   });
 
   $(".navbar").on("click", ".cake-icon", function(e){
-    $('.nav.navbar-nav').toggleClass('visible-menu');//, $('.nav.navbar-nav').is(':visible'));
+    $('.nav.navbar-nav').toggleClass('visible-menu');
   })
 });
 
