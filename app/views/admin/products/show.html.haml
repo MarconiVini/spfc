@@ -1,0 +1,17 @@
+.form-group
+  name:
+  =@product.name
+.form-group
+  slug:
+  =@product.slug
+.form-group
+  Preço Base:
+  =@product.base_price
+
+.form-group
+  images:
+  -@product.images.each do |image| 
+    %a{href: image.file.url, target: "_blank"}
+      %img{src: image.file.thumb.url}
+  
+=link_to "voltar", admin_products_path

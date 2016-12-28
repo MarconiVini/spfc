@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'dashboard' => 'dashboard#index'
+     resources :admins
+  #  resources :products#, param: :product_id
+  #  resources :addons
+  end
+
+  devise_for :admins, controllers: {sessions: 'admin/sessions'}, 
+    :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "registrar" }   
+  
+  
+
   get 'home/index'
 
   root 'home#index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

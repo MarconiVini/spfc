@@ -27,7 +27,9 @@ gem 'jbuilder', '~> 2.0'
 # Action Cable dependencies for the Redis adapter
 gem 'redis', '~> 3.0'
 gem 'devise'#, git: 'git@github.com:plataformatec/devise.git'
-gem 'kaminari'#, :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+#gem 'kaminari'#, :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+gem 'kaminari-mongoid'
+gem 'kaminari-actionview'
 
 # file uploader
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'

@@ -1,0 +1,8 @@
+header:
+  Dashboard: "admin_dashboard_path"
+  Configurações: ""
+  Profile: ""
+  Site: "root_path"
+
+lateral:
+  Administradores: "admin_admins_path"
