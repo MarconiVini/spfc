@@ -10,6 +10,8 @@ class User
   field :name, type: String
   field :email, type: String
   field :encrypted_password
+
+  has_many :posts, validate: false
   
   def login
     
