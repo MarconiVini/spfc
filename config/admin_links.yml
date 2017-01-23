@@ -6,3 +6,4 @@ header:
 
 lateral:
   Administradores: "admin_admins_path"
+  Posts: "admin_posts_path"

@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
      resources :admins
-  #  resources :products#, param: :product_id
-  #  resources :addons
+     resources :posts
   end
 
   devise_for :admins, controllers: {sessions: 'admin/sessions'}, 

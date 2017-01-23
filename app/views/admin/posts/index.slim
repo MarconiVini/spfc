@@ -1,0 +1,32 @@
+- entity = Post
+table.table.table-hover
+  tr
+    th
+      =entity.human_attribute_name(:body)
+    th
+      =entity.human_attribute_name(:owner)    
+    th
+      =entity.human_attribute_name(:created_at)
+    th
+      Editar  
+    th
+      Deletar
+  - @posts.each do |post|
+    tr
+      td
+        =post.body
+      td
+        -binding.pry
+        =post.adm_owner
+      td
+        =post.created_at
+      td
+        =link_to t(:edit), edit_admin_post_path(post), class: "btn btn-default"
+      td
+        =button_to t(:delete), admin_post_path(post), method: :delete, data: { confirm: t(:are_you_sure) }, class: "btn btn-danger"
+  tr
+    td colspan="5"
+      =paginate @posts
+
+=button_to t("buttons.new_post"), new_admin_post_path, method: :get, css: "btn btn-default"
+

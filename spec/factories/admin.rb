@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :admin do
-    body { Faker::Lorem.paragraphs }
+    name { Faker::Name.name }
+    email { Faker::Internet.email }
+    password { Faker::Internet.password(8)  }
   end
 end

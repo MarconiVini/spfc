@@ -3,6 +3,7 @@ pt-BR:
   no_slug: "---Sem slug---"
   are_you_sure: "Está certo disso?"
   buttons:
+    new_post: "Novo post"
     new_admin: "Novo admin"
     new_product: "novo produto"
     show_product: "visualizar produto"
