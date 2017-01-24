@@ -8,6 +8,7 @@ class Admin::BaseAdminController < ActionController::Base
   before_action :set_header, :check_admin_is_logged_in
 
   def check_admin_is_logged_in
+    binding.pry
     redirect_to(controller: "sessions", action: "new") unless current_admin
   end
 end

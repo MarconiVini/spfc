@@ -1,6 +1,7 @@
 class Admin::PostsController < Admin::BaseAdminController
 
   def index
+    binding.pry
     @posts = Post.page params[:page]
   end
 
@@ -10,7 +11,6 @@ class Admin::PostsController < Admin::BaseAdminController
 
   def create
     @post = Post.new(post_params)
-    binding.pry
     @post.adm_owner = current_admin
     if @post.save
       flash[:notice] = "O Post foi criado com sucesso !"
