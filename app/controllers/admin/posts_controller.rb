@@ -1,7 +1,6 @@
 class Admin::PostsController < Admin::BaseAdminController
 
   def index
-    binding.pry
     @posts = Post.page params[:page]
   end
 

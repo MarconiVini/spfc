@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :post do
-    body { Faker::Lorem.paragraphs }
+    body { Faker::Lorem.sentence }
     
     factory :post_with_user do
      after(:build) do |post|
