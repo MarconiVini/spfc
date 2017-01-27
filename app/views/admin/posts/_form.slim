@@ -4,6 +4,6 @@
     =f.text_field :body, class: "form-control"
   .form-group
     =f.label :owner
-    =f.text_field :owner, :readonly => true, class: "form-control"
+    =f.text_field :owner, :value => (@post.owner.nil? ? '' : @post.owner.name), :readonly => true, class: "form-control"
   .form-group
     =f.submit class: "btn btn-default"

@@ -8,6 +8,20 @@ class Admin::PostsController < Admin::BaseAdminController
     @post = Post.new
   end
 
+  def edit
+    @post = Post.find params[:id]
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
+      flash[:notice] = "O post foi editado com sucesso !"
+      redirect_to :action => :index
+    else
+      render :action => :edit
+    end
+  end
+
   def create
     @post = Post.new(post_params)
     @post.adm_owner = current_admin
