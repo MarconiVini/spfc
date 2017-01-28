@@ -35,10 +35,13 @@ gem 'kaminari-actionview'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'rmagick'
 
+#Text editor
+gem 'trix'
+
 #markdown
-gem 'redcarpet'
+#gem 'redcarpet'
 #styles for codeblocks
-gem 'rouge'
+#gem 'rouge'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
