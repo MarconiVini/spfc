@@ -1,3 +1,12 @@
-h1[style="font-size: 50px"] Mauricio Viadao
-p[style="height: 1000px"] 
-  |huehuehue
+
+- @posts.each do |post|
+  article.minipost
+    div.image-thumbnail
+      image
+        img
+    a 
+      header
+        h3 Titulos
+        time datetime='2014-06-19T21:30' 19-06-2014 21:30h
+      div.body
+        =post.body.html_safe
