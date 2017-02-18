@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :post do
     body { Faker::Lorem.sentence }
+    title { Faker::Name.title }
     
     factory :post_with_user do
      after(:build) do |post|

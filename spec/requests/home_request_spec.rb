@@ -9,7 +9,7 @@ RSpec.describe "Home request flow", type: :request do
       expect(response).to have_http_status(200)
       expect(response.body).to include(post_list[0].body)
       expect(response.body).to include(post_list[1].body)
-      expect(response.body).to include(post_list[].body)
+      expect(response.body).to include(post_list[2].body)
     end
   end
 end
