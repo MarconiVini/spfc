@@ -2,6 +2,8 @@
 table.table.table-hover
   tr
     th
+      =entity.human_attribute_name(:title)
+    th
       =entity.human_attribute_name(:body)
     th
       =entity.human_attribute_name(:owner)    
@@ -11,6 +13,8 @@ table.table.table-hover
     th Deletar
   - @posts.each do |post|
     tr
+      td
+        =post.title
       td
         =post.body
       td
@@ -22,7 +26,7 @@ table.table.table-hover
       td
         =button_to t(:delete), admin_post_path(post), method: :delete, data: { confirm: t(:are_you_sure) }, class: "btn btn-danger"
   tr
-    td colspan="5"
+    td colspan="6"
       =paginate @posts
 
 =button_to t("buttons.new_post"), new_admin_post_path, method: :get, css: "btn btn-default"

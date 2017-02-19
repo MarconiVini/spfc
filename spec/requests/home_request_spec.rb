@@ -10,6 +10,19 @@ RSpec.describe "Home request flow", type: :request do
       expect(response.body).to include(post_list[0].body)
       expect(response.body).to include(post_list[1].body)
       expect(response.body).to include(post_list[2].body)
+
+      expect(response.body).to include(post_list[0].title)
+      expect(response.body).to include(post_list[1].title)
+      expect(response.body).to include(post_list[2].title)
+    end
+
+    it 'have links to the body' do
+      get root_path
+      expect(response.body).to include(post_list[0].slug)
     end
   end
 end
+
+
+
+

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, :type => :model do 
+  let(:post) { create(:post) }
   let(:post_build) { build(:post) }
   let(:post_with_owner) { build(:post_with_user) }
   let(:user) { create(:user) }
@@ -48,3 +49,4 @@ RSpec.describe Post, :type => :model do
     expect(Post.find post_build.slug).to eq post_build
   end
 end
+

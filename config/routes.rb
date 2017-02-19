@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  resources :posts, only: [:show]
+
   root 'home#index'
 
 end
