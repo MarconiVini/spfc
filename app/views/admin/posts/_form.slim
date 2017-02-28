@@ -1,10 +1,13 @@
 =form_for [:admin, @post] do |f|
   .form-group
     =f.label :title
-    =f.text_field :title
+    =f.text_field :title, class: "form-control"
+  .form-group
+    =f.label :summary
+    =f.text_field :summary, class: "form-control"
   .form-group
     =f.label :body
-    =f.trix_editor :body
+    =f.trix_editor :body, class: "trix-editor"
   .form-group
     =f.label :owner
     =f.text_field :owner, :value => (@post.owner.nil? ? '' : @post.owner.name), :readonly => true, class: "form-control"

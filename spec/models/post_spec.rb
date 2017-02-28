@@ -7,6 +7,7 @@ RSpec.describe Post, :type => :model do
   let(:user) { create(:user) }
   let(:admin) { create(:admin) }
   let(:title) { "Rogério o salvador daqui !" }
+  let(:summary) { "Sumário para o post!!" }
   
   it 'have a body text' do
     text = "hooo new post"
@@ -19,6 +20,12 @@ RSpec.describe Post, :type => :model do
     post_build.title = title
     post_build.save!
     expect(post_build.title).to eq title
+  end
+
+  it 'have a summary' do
+    post_build.summary = summary
+    post_build.save!
+    expect(post_build.summary).to eq summary
   end
 
   it 'belongs only to a user' do

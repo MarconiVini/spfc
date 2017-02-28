@@ -4,7 +4,7 @@ table.table.table-hover
     th
       =entity.human_attribute_name(:title)
     th
-      =entity.human_attribute_name(:body)
+      =entity.human_attribute_name(:summary)
     th
       =entity.human_attribute_name(:owner)    
     th
@@ -16,7 +16,7 @@ table.table.table-hover
       td
         =post.title
       td
-        =post.body
+        =post.summary
       td
         =(post.owner.nil?) ? '' : post.owner.name
       td

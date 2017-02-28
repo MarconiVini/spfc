@@ -7,9 +7,9 @@ RSpec.describe "Home request flow", type: :request do
     it "get all posts" do
       get root_path
       expect(response).to have_http_status(200)
-      expect(response.body).to include(post_list[0].body)
-      expect(response.body).to include(post_list[1].body)
-      expect(response.body).to include(post_list[2].body)
+      expect(response.body).to include(post_list[0].summary)
+      expect(response.body).to include(post_list[1].summary)
+      expect(response.body).to include(post_list[2].summary)
 
       expect(response.body).to include(post_list[0].title)
       expect(response.body).to include(post_list[1].title)

@@ -3,8 +3,9 @@ class Post
   include Mongoid::Timestamps
   include Mongoid::Slug
 
-  field :body,    type: String
-  field :title,   type: String
+  field :body,        type: String
+  field :summary,     type: String
+  field :title,       type: String
   slug :title
 
   belongs_to :adm_owner, :class_name => "Admin", optional: true

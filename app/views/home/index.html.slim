@@ -10,4 +10,4 @@
         time datetime="#{post.created_at}" 
           =I18n.l(post.created_at, format: :long)
       div.body
-        =post.body.html_safe
+        =post.summary
