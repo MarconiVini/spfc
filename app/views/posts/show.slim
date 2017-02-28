@@ -1,3 +1,8 @@
-h1=@post.title
-div
-  =@post.body.html_safe
+div.post
+  h1=@post.title
+  p.post-time
+    time datetime="#{@post.created_at}"
+      span.glyphicon.glyphicon-calendar 
+      =I18n.l(@post.created_at, format: :long)
+  div
+    =@post.body.html_safe
