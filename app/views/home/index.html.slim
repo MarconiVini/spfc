@@ -1,13 +1,17 @@
 
 - @posts.each do |post|
   article.minipost
-    div.image-thumbnail
-      image
-        img
-    =link_to "posts\\#{post.slug}" do 
-      header
-        h3=post.title
-        time datetime="#{post.created_at}" 
-          =I18n.l(post.created_at, format: :long)
-      div.body
-        =post.summary
+    div.inner-post
+      div.image-thumbnail
+        image
+          img
+      =link_to "posts\\#{post.slug}" do 
+        header
+          h3=post.title
+          time datetime="#{post.created_at}"
+            span.glyphicon.glyphicon-calendar 
+            =I18n.l(post.created_at, format: :long)
+        div.body
+          =post.summary
+      div.bottom-link
+        =link_to "Leia Mais", "posts\\#{post.slug}"

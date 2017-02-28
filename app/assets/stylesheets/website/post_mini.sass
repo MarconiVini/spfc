@@ -1,10 +1,16 @@
 .minipost
-  color: #363636
+  color: #808080
   cursor: pointer
   width: 50%
   float: left
-  //position: relative
-  min-height: 1px
+  min-height: 230px
+
+  @include respond-to(handhelds)
+    width: 100%
+
+  .inner-post
+    margin: 0 20px 50px 20px
+
   .image-thumbnail
     margin: 0 0 15px 0
   a
@@ -14,13 +20,32 @@
     header
       margin: 0 0 15px 0
       h3
+        color: #363636
         font-size: 19px
         margin-bottom: 10px
         font-weight: bold
         text-transform: uppercase
+        &:hover
+          color: #aa4243
       time
         color: #bababa
+        span
+          margin: 0 4px 0 0
+
         &:hover
           text-decoration: underline
+  .bottom-link
+    width: 100%
+    margin-top: 20px
+    margin-bottom: 0px
+    display: inline-block
+    font-weight: bold
+    a
+      color: #aa4243
+      
+      &:hover
+        text-decoration: underline
+
+
 
 
